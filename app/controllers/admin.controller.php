@@ -120,7 +120,6 @@ class adminController
     
     function editGenero($idGenero){
         $this->authHelper->verificarLogeado();
-        var_dump($_POST);   
         $genero = $this->generosModel->getGenero($idGenero);
 
         if(isset($_POST['genero'])){

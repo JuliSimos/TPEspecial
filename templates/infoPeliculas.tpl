@@ -1,9 +1,9 @@
 {if $error}
-    <p>{$error}</p>
+    {include 'error.tpl'}
 {/if}
 
-<table class='table'>
-        <thead>
+<table class='table table-bordered w-75 mx-auto mt-5'>
+        <thead class="table-dark">
             <tr>
                 <th>Nombre</th>
                 <th>Sinopsis</th>

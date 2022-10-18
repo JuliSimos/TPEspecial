@@ -1,12 +1,19 @@
-<form action="{BASE_URL}login/verificar" method="post">
-    <label for="nombre">User</label>
-    <input type="text" name="nombreUser" placeholder="Nombre"/>
+<form action="{BASE_URL}login/verificar"  class="w-50 text-center mx-auto my-5 border border-success rounded p-4" method="post">
 
-    <label for="password">Contraseña</label>
-    <input type="password" name="password" placeholder="Contraseña"/>
+        <div class='row'>
 
-    <button class= 'btn' type="submit">Entrar</button>
-</form>
+            <div class='col md-2'>
+                <label class='form-label fw-bold' for="nombre">User</label>
+                <input class="form-control" type="text" name="nombreUser" placeholder="Nombre"/>
+            </div>
+            <div class='col md-2'>
+                <label class='form-label fw-bold' for="password">Contraseña</label>
+                <input class="form-control" type="password" name="password" placeholder="Contraseña"/>
+            </div>
+        </div>
+            <button class= 'w-50 mx-auto mt-3 btn btn-success' type="submit">Entrar</button>
+
+    </form>
 {if $error}
-    <p>{$error}</p>
+    {include 'error.tpl'}
 {/if}

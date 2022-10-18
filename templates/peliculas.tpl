@@ -1,5 +1,5 @@
-<table class='table'>
-        <thead>
+<table class='table table-bordered w-75 mx-auto mt-5'>
+    <thead class="table-dark">
             <tr>
                 <th>Nombre</th>
                 <th>Fecha</th>
@@ -13,7 +13,7 @@
                     <td>{$peli->nombre}</td>
                     <td>{$peli->fecha}</td>
                     <td>{$peli->genero|capitalize}</td>
-                    <td class="text-center"> <a class='btn' href="{BASE_URL}info/peliculas/{$peli->id}"> + Info </a>
+                    <td class="text-center"> <a class='btn btn-outline-dark' href="{BASE_URL}info/peliculas/{$peli->id}"> + Info </a>
                 </tr>
             {/foreach}
 
@@ -21,7 +21,7 @@
     </table>
 
     {if $error}
-        <p>{$error}</p>
+        {include 'error.tpl'}
     {/if}
     
 

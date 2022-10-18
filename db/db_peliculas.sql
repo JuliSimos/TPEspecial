@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-10-2022 a las 00:43:04
+-- Tiempo de generación: 18-10-2022 a las 02:57:25
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -40,7 +40,9 @@ INSERT INTO `generos` (`id`, `genero`) VALUES
 (2, 'Animacion'),
 (5, 'Accion'),
 (6, 'Aventura'),
-(7, 'Accion');
+(44, 'Romance'),
+(45, 'Terror'),
+(46, 'Drama');
 
 -- --------------------------------------------------------
 
@@ -63,9 +65,13 @@ CREATE TABLE `peliculas` (
 --
 
 INSERT INTO `peliculas` (`id`, `nombre`, `sinopsis`, `fecha`, `pais`, `direccion`, `id_genero_fk`) VALUES
-(5, 'Shrek', 'Ogro malo', 2001, 'Argentina', 'Adam Sandler', 2),
-(18, 'JULIETA', 'asdasd', 1998, 'Argentina', 'Mamarisa', 5),
-(19, 'Terminator', 'ogro bueno', 2001, 'EEUU', 'Adam Sandler', 2);
+(5, 'Shrek', 'Un ogro debe rescatar a la princesa para no perder su pantano', 2001, 'EEUU', 'Mike Mitchell', 2),
+(19, 'Terminator', 'ogro bueno', 2001, 'EEUU', 'Adam Sandler', 2),
+(21, '101 Dalmatas', 'Su felicidad está amenazada por Cruella De Ville, una pérfida mujer que adora los abrigos de pieles.', 1961, 'EEUU', 'Clyde Geronimi', 2),
+(22, 'Venom', 'Un extraterrestre causa caos en la ciudad', 2018, 'EEUU', 'Ruben Fleischer', 5),
+(23, 'Cuestion de Tiempo', 'El amor se pondrá en juego ', 2003, 'Gran Bretaña', 'Richard Curtis', 44),
+(24, 'Viernes 13', 'El campamento de verano del lago Cristal reabre sus puertas tras permanecer varios años cerrado a raíz de un accidente. A partir de ese momento, comienza a aparecer gente muerta en extrañas circunstancias.', 1980, 'EEUU', '	 Sean S. Cunningham', 45),
+(25, 'Argentina, 1985', 'Juicio a las juntas', 2022, 'Argentina', 'Santiago Mitre', 46);
 
 -- --------------------------------------------------------
 
@@ -117,13 +123,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `generos`
 --
 ALTER TABLE `generos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `peliculas`
 --
 ALTER TABLE `peliculas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

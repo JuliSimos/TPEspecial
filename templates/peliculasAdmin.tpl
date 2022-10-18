@@ -1,5 +1,5 @@
-<table class='table'>
-        <thead>
+<table class='table table-bordered w-75 mx-auto'>
+        <thead class="table-dark">
             <tr>
                 <th>Nombre</th>
                 <th>Fecha</th>
@@ -13,9 +13,9 @@
                     <td>{$peli->nombre}</td>
                     <td>{$peli->fecha}</td>
                     <td>{$peli->genero|capitalize}</td>
-                    <td class="text-center"> <a class='btn' href="{BASE_URL}info/peliculas/{$peli->id}"> + Info </a>
-                     <a class='btn' href="{BASE_URL}panel/pelicula/editar/{$peli->id}"> editar</a> 
-                     <a class='btn' href="{BASE_URL}panel/pelicula/borrar/{$peli->id}"> borrar</a> </td>
+                    <td class="text-center "> <a class='btn btn-outline-dark' href="{BASE_URL}info/peliculas/{$peli->id}"> + Info </a>
+                     <a class='btn btn-outline-warning ' href="{BASE_URL}panel/pelicula/editar/{$peli->id}"> Editar</a> 
+                     <a class='btn btn-outline-danger fw-bold' href="{BASE_URL}panel/pelicula/borrar/{$peli->id}"> Borrar</a> </td>
                 </tr>
             {/foreach}
 

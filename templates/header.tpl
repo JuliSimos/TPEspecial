@@ -10,23 +10,23 @@
 </head>
 <body>
     <header>
-        <h2>Hola! Soy el header</h2>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{BASE_URL}">HOME</a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <a class="navbar-brand fw-bold fs-3 text-white" href="{BASE_URL}">HOME</a>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           {foreach from=$generosHeader item=$elem}
-            <li class='nav-item'>
-                <a class='nav-link active' href='{BASE_URL}info/generos/{$elem->id}'>{$elem->genero}</a>
+            <li>
+                <a class='nav-link btn btn-outline-secondary text-white mx-1' href='{BASE_URL}info/generos/{$elem->id}'>{$elem->genero}</a>
             </li>
           {/foreach}
       </ul>
     </div>
-    <a class='navbar-brand text-end' href='{BASE_URL}login'>Ingresar</a>
     {if isset($nombreUser)}
-      <a class='navbar-brand text-end' href='{BASE_URL}deslogearse'>Cerrar Sesión</a>
-      <p class='navbar-brand'>{$nombreUser}</p>
+        <a class='navbar-brand text-end btn btn-danger text-white fs-6' href='{BASE_URL}deslogearse'>Cerrar Sesión</a>
+        <p class='navbar-brand text-end align-baseline pt-3 text-white'>{$nombreUser|capitalize}</p>
+      {else}
+        <a class='navbar-brand text-end text-white btn btn-success' href='{BASE_URL}login'>Ingresar</a>
     {/if}
   </div>
 </nav>     
